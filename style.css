@@ -75,7 +75,7 @@ a { color: #2b89ff; text-decoration: none; transition: color var(--transition-fa
 a:hover { color: var(--color-ink); }
 
 /* ================================================================
-   FIX: HILANGKAN GARIS KEDIP PADA PROFILE - PALING PENTING
+   FIX: HILANGKAN GARIS KEDIP PADA PROFILE
    ================================================================ */
 img:focus,
 img:active,
@@ -101,7 +101,6 @@ img:active,
     user-drag: none !important;
 }
 
-/* Profile photo wrapper - no focus */
 .profile-photo-wrapper {
     outline: none !important;
     -webkit-tap-highlight-color: transparent !important;
@@ -111,7 +110,6 @@ img:active,
     cursor: default !important;
 }
 
-/* Profile photo - no selection */
 .profile-photo {
     pointer-events: none !important;
     cursor: default !important;
@@ -231,7 +229,7 @@ img:active,
 .tech-pill:hover { border-color: var(--color-terraform); background: var(--gradient-purple-subtle); }
 
 /* ================================================================
-   HERO - WELCOME ANIMATION
+   HERO
    ================================================================ */
 .hero-section {
     padding: 30px 0 50px 0;
@@ -244,7 +242,6 @@ img:active,
 .hero-content { padding: var(--spacing-md) 0; }
 .hero-description { max-width: 540px; color: var(--color-ink); }
 
-/* Welcome Animation */
 .welcome-animate {
     animation: fadeSlideUp 0.8s ease forwards;
 }
@@ -259,7 +256,7 @@ img:active,
 .welcome-animate .tech-pills { animation: fadeSlideUp 0.8s ease 0.5s forwards; opacity: 0; }
 
 /* ================================================================
-   ORBIT ANIMATION - PROFILE TIDAK BISA DIKLIK
+   ORBIT ANIMATION
    ================================================================ */
 .hero-illustration {
     display: flex;
@@ -300,7 +297,6 @@ img:active,
     cursor: default !important;
 }
 
-/* Ring Berputar */
 .profile-ring {
     position: absolute;
     top: -12px;
@@ -321,7 +317,6 @@ img:active,
     to { transform: rotate(360deg); }
 }
 
-/* ORBIT - Icon bisa di-hover */
 .orbit {
     position: absolute;
     top: 50%;
@@ -362,7 +357,6 @@ img:active,
     pointer-events: none !important;
 }
 
-/* Radius Orbit */
 @keyframes orbit-rotate-1 { from { transform: rotate(0deg) translateX(clamp(130px, 14vw, 185px)) rotate(0deg); } to { transform: rotate(360deg) translateX(clamp(130px, 14vw, 185px)) rotate(-360deg); } }
 @keyframes orbit-rotate-2 { from { transform: rotate(60deg) translateX(clamp(130px, 14vw, 185px)) rotate(-60deg); } to { transform: rotate(420deg) translateX(clamp(130px, 14vw, 185px)) rotate(-420deg); } }
 @keyframes orbit-rotate-3 { from { transform: rotate(120deg) translateX(clamp(130px, 14vw, 185px)) rotate(-120deg); } to { transform: rotate(480deg) translateX(clamp(130px, 14vw, 185px)) rotate(-480deg); } }
@@ -377,7 +371,6 @@ img:active,
 .orbit-5 { animation: orbit-rotate-5 16s linear infinite; }
 .orbit-6 { animation: orbit-rotate-6 16s linear infinite; }
 
-/* Icon Warna */
 .orbit-1 .tech-icon { border-color: #e34f26; }
 .orbit-2 .tech-icon { border-color: #2965f1; }
 .orbit-3 .tech-icon { border-color: #f7df1e; }
@@ -423,6 +416,9 @@ img:active,
 }
 .section-gallery { scroll-margin-top: 80px; }
 
+/* ================================================================
+   PROJECT CARDS - SEMUA WARNA KONSISTEN (TIDAK BELANG-BELANG)
+   ================================================================ */
 .project-card,
 .design-card {
     background: var(--color-surface-1);
@@ -438,9 +434,11 @@ img:active,
     border-color: var(--color-terraform);
     box-shadow: 0 8px 30px rgba(123,66,188,0.15);
 }
+
 .project-image { position: relative; overflow: hidden; }
 .project-image img { width: 100%; height: 200px; object-fit: cover; transition: transform var(--transition-medium); }
 .project-card:hover .project-image img { transform: scale(1.03); }
+
 .project-badge {
     position: absolute;
     top: var(--spacing-sm);
@@ -457,20 +455,7 @@ img:active,
 [data-bs-theme="light"] .project-badge { background: rgba(255,255,255,0.85); color: var(--color-ink); }
 .project-body { padding: var(--spacing-lg); }
 
-.product-card-terraform { background: var(--color-terraform); border-color: var(--color-terraform); }
-.product-card-terraform .project-body { color: var(--color-ink); }
-.product-card-terraform .btn-tertiary { border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.8); }
-.product-card-terraform .btn-tertiary:hover { background: rgba(255,255,255,0.1); color: var(--color-ink); }
-
-.product-card-vault { background: var(--color-vault); border-color: var(--color-vault); }
-.product-card-vault .project-body { color: var(--color-inverse-ink); }
-.product-card-vault .btn-tertiary { border-color: rgba(0,0,0,0.2); color: rgba(0,0,0,0.7); }
-.product-card-vault .btn-tertiary:hover { background: rgba(0,0,0,0.1); color: var(--color-inverse-ink); }
-
-.product-card-waypoint { background: var(--color-waypoint); border-color: var(--color-waypoint); }
-.product-card-waypoint .project-body { color: var(--color-inverse-ink); }
-.product-card-waypoint .btn-tertiary { border-color: rgba(0,0,0,0.2); color: rgba(0,0,0,0.7); }
-.product-card-waypoint .btn-tertiary:hover { background: rgba(0,0,0,0.1); color: var(--color-inverse-ink); }
+/* HAPUS product-card-terraform, product-card-vault, product-card-waypoint - KONSISTEN */
 
 /* ================================================================
    SKILLS
