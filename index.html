@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Athar Aryasatya | Portfolio</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- Google Font: Inter -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ============================================================
+    NAVIGATION
+    ============================================================ -->
+    <nav class="navbar navbar-expand-lg fixed-top top-nav" id="mainNavbar">
+        <div class="container-fluid px-3 px-lg-5">
+            <a class="navbar-brand" href="#">
+                <span class="brand-logo">
+                    <i class="bi bi-code-square"></i>
+                </span>
+                <span class="brand-text">Athar Aryasatya</span>
+            </a>
+            
+            <div class="d-flex align-items-center gap-2">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="bi bi-moon-fill" id="themeIcon"></i>
+                </button>
+                <button
+                    class="navbar-toggler border-0 d-lg-none"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNav"
+                    aria-controls="mainNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                    id="navbarToggler"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                <div class="ms-lg-3 d-flex gap-2 mt-2 mt-lg-0">
+                    <a href="#contact" class="btn btn-primary btn-sm w-100 w-lg-auto">Hire Me</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================================
+    HERO / HOME - FIX: Profile tidak bisa di-select/klik
+    ============================================================ -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center hero-row">
+                <!-- Profile Photo -->
+                <div class="col-lg-5 order-lg-last text-center mb-4 mb-lg-0">
+                    <div class="hero-illustration">
+                        <div class="profile-photo-wrapper">
+                            <img 
+                                src="assets/images/profile.png"
+                                alt="Athar Aryasatya" 
+                                class="profile-photo"
+                                loading="lazy"
+                                draggable="false"
+                                onerror="this.src='https://placehold.co/500x500/1f232b/ffffff?text=Profile'"
+                            />
+                            <div class="profile-ring"></div>
+                            <!-- ORBIT ICONS -->
+                            <div class="orbit orbit-1"><div class="tech-icon"><img src="assets/images/html.png" alt="HTML" class="tech-icon-img" loading="lazy" draggable="false" /></div></div>
+                            <div class="orbit orbit-2"><div class="tech-icon"><img src="assets/images/css.png" alt="CSS" class="tech-icon-img" loading="lazy" draggable="false" /></div></div>
+                            <div class="orbit orbit-3"><div class="tech-icon"><img src="assets/images/js.png" alt="JS" class="tech-icon-img" loading="lazy" draggable="false" /></div></div>
+                            <div class="orbit orbit-4"><div class="tech-icon"><img src="assets/images/bootstrap.png" alt="Bootstrap" class="tech-icon-img" loading="lazy" draggable="false" /></div></div>
+                            <div class="orbit orbit-5"><div class="tech-icon"><img src="assets/images/flutter.png" alt="Flutter" class="tech-icon-img" loading="lazy" draggable="false" /></div></div>
+                            <div class="orbit orbit-6"><div class="tech-icon"><img src="assets/images/figma.png" alt="Figma" class="tech-icon-img" loading="lazy" draggable="false" /></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 hero-content welcome-animate">
+                    <span class="eyebrow">Frontend Developer &amp; UI/UX Designer</span>
+                    <h1 class="display-xl">
+                        Hi, I'm <br />
+                        <span class="highlight-terraform">Athar</span>
+                        <span class="highlight-waypoint">Aryasatya</span>
+                    </h1>
+                    <p class="body-lg mt-3 hero-description">
+                        I'm a frontend developer and UI/UX designer with a passion for crafting 
+                        responsive, user-friendly web and mobile applications. 
+                        Currently studying at <strong class="highlight-ink">Universitas Esa Unggul</strong>.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3 mt-3">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Let's Talk</a>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2 mt-4 tech-pills">
+                        <span class="product-pill tech-pill"><img src="assets/images/html.png" alt="HTML" class="tech-icon-img" loading="lazy" draggable="false" /> HTML</span>
+                        <span class="product-pill tech-pill"><img src="assets/images/css.png" alt="CSS" class="tech-icon-img" loading="lazy" draggable="false" /> CSS</span>
+                        <span class="product-pill tech-pill"><img src="assets/images/js.png" alt="JavaScript" class="tech-icon-img" loading="lazy" draggable="false" /> JS</span>
+                        <span class="product-pill tech-pill"><img src="assets/images/bootstrap.png" alt="Bootstrap" class="tech-icon-img" loading="lazy" draggable="false" /> Bootstrap</span>
+                        <span class="product-pill tech-pill"><img src="assets/images/flutter.png" alt="Flutter" class="tech-icon-img" loading="lazy" draggable="false" /> Flutter</span>
+                        <span class="product-pill tech-pill"><img src="assets/images/figma.png" alt="Figma" class="tech-icon-img" loading="lazy" draggable="false" /> Figma</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    PROJECTS
+    ============================================================ -->
+    <section id="projects" class="section-projects">
+        <div class="container">
+            <span class="eyebrow">Portfolio</span>
+            <h2 class="display-lg mb-4">Featured Projects</h2>
+            <p class="body-lg text-muted mb-5">A selection of my work across web and mobile platforms.</p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/images/project-abesnku.jpg" alt="Abesnku App" class="img-fluid" loading="lazy" draggable="false" onerror="this.src='https://placehold.co/600x400/1f232b/ffffff?text=Abesnku'" />
+                            <span class="project-badge">Flutter</span>
+                        </div>
+                        <div class="project-body">
+                            <span class="product-pill pill-mobile">Mobile</span>
+                            <h3 class="card-title">Abesnku</h3>
+                            <p class="body-sm text-muted">Attendance app for SDN Rancagong 2 with 4 user roles. Built with Flutter &amp; GetX.</p>
+                            <div class="d-flex gap-2 mt-3">
+                                <a href="#" class="btn btn-tertiary btn-sm"><i class="bi bi-figma"></i> Figma</a>
+                                <a href="#" class="btn btn-tertiary btn-sm"><i class="bi bi-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/images/project-apotiku.jpg" alt="Apotiku Website" class="img-fluid" loading="lazy" draggable="false" onerror="this.src='https://placehold.co/600x400/1f232b/ffffff?text=Apotiku'" />
+                            <span class="project-badge">Laravel</span>
+                        </div>
+                        <div class="project-body">
+                            <span class="product-pill pill-web">Web</span>
+                            <h3 class="card-title">Apotiku</h3>
+                            <p class="body-sm text-muted">Online pharmacy ordering system with Leaflet Maps integration, shopping cart, and checkout.</p>
+                            <div class="d-flex gap-2 mt-3">
+                                <a href="#" class="btn btn-tertiary btn-sm"><i class="bi bi-figma"></i> Figma</a>
+                                <a href="#" class="btn btn-tertiary btn-sm"><i class="bi bi-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card product-card-terraform">
+                        <div class="project-image">
+                            <img src="assets/images/project-supraindo.jpg" alt="Supraindo Website" class="img-fluid" loading="lazy" draggable="false" onerror="this.src='https://placehold.co/600x400/7b42bc/ffffff?text=Supraindo'" />
+                            <span class="project-badge">Bootstrap</span>
+                        </div>
+                        <div class="project-body">
+                            <span class="product-pill pill-web">Web</span>
+                            <h3 class="card-title">PT Supraindo</h3>
+                            <p class="body-sm">Company profile website with animations, responsive layout, and Figma-to-code implementation.</p>
+                            <div class="d-flex gap-2 mt-3">
+                                <a href="https://supraindomulti.com/" target="_blank" class="btn btn-product-terraform btn-sm"><i class="bi bi-box-arrow-up-right"></i> Live</a>
+                                <a href="#" class="btn btn-tertiary btn-sm"><i class="bi bi-figma"></i> Figma</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card product-card-vault">
+                        <div class="project-image">
+                            <img src="assets/images/project-breakco.jpg" alt="Break.Co Prototype" class="img-fluid" loading="lazy" draggable="false" onerror="this.src='https://placehold.co/600x400/ffcf25/000000?text=Break.Co'" />
+                            <span class="project-badge">Figma</span>
+                        </div>
+                        <div class="project-body">
+                            <span class="product-pill pill-ux">UI/UX</span>
+                            <h3 class="card-title">Break.Co</h3>
+                            <p class="body-sm">High-fidelity interactive prototype with user flow, wireframes, and smart animate animations.</p>
+                            <div class="d-flex gap-2 mt-3">
+                                <a href="#" class="btn btn-product-vault btn-sm"><i class="bi bi-figma"></i> View Prototype</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card product-card-waypoint">
+                        <div class="project-image">
+                            <img src="assets/images/project-admin-template.jpg" alt="Admin Template Web" class="img-fluid" loading="lazy" draggable="false" onerror="this.src='https://placehold.co/600x400/14c6cb/000000?text=Admin+Template'" />
+                            <span class="project-badge">Bootstrap</span>
+                        </div>
+                        <div class="project-body">
+                            <span class="product-pill pill-web">Web</span>
+                            <h3 class="card-title">Admin Template Web</h3>
+                            <p class="body-sm">Fully responsive admin dashboard template built with HTML, CSS, Bootstrap, and JavaScript.</p>
+                            <div class="d-flex gap-2 mt-3">
+                                <a href="#" class="btn btn-product-waypoint btn-sm"><i class="bi bi-box-arrow-up-right"></i> Live Demo</a>
+                                <a href="#" class="btn btn-tertiary btn-sm"><i class="bi bi-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/images/project-more-designs.jpg" alt="More Figma Designs" class="img-fluid" loading="lazy" draggable="false" onerror="this.src='https://placehold.co/600x400/1f232b/ffffff?text=More+Designs'" />
+                            <span class="project-badge">Figma</span>
+                        </div>
+                        <div class="project-body">
+                            <span class="product-pill pill-ux">UI/UX</span>
+                            <h3 class="card-title">Design Gallery</h3>
+                            <p class="body-sm text-muted">Collection of UI/UX designs, wireframes, and interactive prototypes for various projects.</p>
+                            <div class="d-flex gap-2 mt-3">
+                                <a href="#design-gallery" class="btn btn-tertiary btn-sm"><i class="bi bi-figma"></i> View Gallery</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    DESIGN GALLERY
+    ============================================================ -->
+    <section id="design-gallery" class="section-gallery">
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-2">
+                <div>
+                    <span class="eyebrow">Gallery</span>
+                    <h2 class="display-md mb-0">Figma Design Gallery</h2>
+                </div>
+                <a href="#projects" class="btn btn-secondary btn-sm"><i class="bi bi-arrow-left"></i> Back to Projects</a>
+            </div>
+            <p class="body-lg text-muted mb-5">A showcase of my UI/UX design work created in Figma.</p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="design-card">
+                        <img src="assets/images/design-1.jpg" alt="Design 1" class="img-fluid" loading="lazy" draggable="false" onerror="this.src='https://placehold.co/600x400/15181e/ffffff?text=Design+1'" />
+                        <div class="design-body"><h4 class="card-title">Mobile App Design</h4><p class="body-sm text-muted">E-commerce mobile UI</p></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="design-card">
+                        <img src="assets/images/design-2.jpg" alt="Design 2" class="img-fluid" loading="lazy" draggable="false" onerror="this.src='https://placehold.co/600x400/15181e/ffffff?text=Design+2'" />
+                        <div class="design-body"><h4 class="card-title">Dashboard UI</h4><p class="body-sm text-muted">Admin panel design</p></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="design-card">
+                        <img src="assets/images/design-3.jpg" alt="Design 3" class="img-fluid" loading="lazy" draggable="false" onerror="this.src='https://placehold.co/600x400/15181e/ffffff?text=Design+3'" />
+                        <div class="design-body"><h4 class="card-title">Landing Page</h4><p class="body-sm text-muted">Corporate website design</p></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="design-card">
+                        <img src="assets/images/design-4.jpg" alt="Design 4" class="img-fluid" loading="lazy" draggable="false" onerror="this.src='https://placehold.co/600x400/15181e/ffffff?text=Design+4'" />
+                        <div class="design-body"><h4 class="card-title">Wireframe Set</h4><p class="body-sm text-muted">Low-fidelity wireframes</p></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="design-card">
+                        <img src="assets/images/design-5.jpg" alt="Design 5" class="img-fluid" loading="lazy" draggable="false" onerror="this.src='https://placehold.co/600x400/15181e/ffffff?text=Design+5'" />
+                        <div class="design-body"><h4 class="card-title">User Flow</h4><p class="body-sm text-muted">User journey mapping</p></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="design-card">
+                        <img src="assets/images/design-6.jpg" alt="Design 6" class="img-fluid" loading="lazy" draggable="false" onerror="this.src='https://placehold.co/600x400/15181e/ffffff?text=Design+6'" />
+                        <div class="design-body"><h4 class="card-title">Interactive Prototype</h4><p class="body-sm text-muted">Prototype with animations</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    SKILLS
+    ============================================================ -->
+    <section id="skills" class="section-skills">
+        <div class="container">
+            <span class="eyebrow">Expertise</span>
+            <h2 class="display-lg mb-4">Tech Stack &amp; Tools</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrapper">
+                            <img src="assets/images/html.png" alt="HTML" class="skill-icon-img" loading="lazy" draggable="false" />
+                            <img src="assets/images/css.png" alt="CSS" class="skill-icon-img" loading="lazy" draggable="false" />
+                            <img src="assets/images/js.png" alt="JS" class="skill-icon-img" loading="lazy" draggable="false" />
+                        </div>
+                        <h4 class="card-title">Languages</h4>
+                        <ul class="list-unstyled body-sm skill-list">
+                            <li>HTML5 / CSS3</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>Dart</li>
+                            <li>PHP (basic)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrapper">
+                            <img src="assets/images/bootstrap.png" alt="Bootstrap" class="skill-icon-img" loading="lazy" draggable="false" />
+                            <img src="assets/images/flutter.png" alt="Flutter" class="skill-icon-img" loading="lazy" draggable="false" />
+                        </div>
+                        <h4 class="card-title">Frameworks</h4>
+                        <ul class="list-unstyled body-sm skill-list">
+                            <li>Bootstrap</li>
+                            <li>Flutter (GetX)</li>
+                            <li>Laravel (basic)</li>
+                            <li>React.js (basic)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrapper">
+                            <img src="assets/images/figma.png" alt="Figma" class="skill-icon-img" loading="lazy" draggable="false" />
+                        </div>
+                        <h4 class="card-title">Design</h4>
+                        <ul class="list-unstyled body-sm skill-list">
+                            <li>Figma (UI/UX)</li>
+                            <li>Wireframing</li>
+                            <li>Prototyping</li>
+                            <li>User Flow</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-card">
+                        <i class="bi bi-tools skill-icon"></i>
+                        <h4 class="card-title">Others</h4>
+                        <ul class="list-unstyled body-sm skill-list">
+                            <li>Git / GitHub</li>
+                            <li>Responsive Design</li>
+                            <li>API Integration</li>
+                            <li>Agile / SDLC</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    EXPERIENCE
+    ============================================================ -->
+    <section id="experience" class="section-experience">
+        <div class="container">
+            <span class="eyebrow">Career</span>
+            <h2 class="display-lg mb-4">Work Experience</h2>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="experience-card">
+                        <div class="d-flex flex-wrap justify-content-between align-items-start gap-2">
+                            <div>
+                                <span class="product-pill">Frontend</span>
+                                <h4 class="card-title mt-2">PT Supraindo Multi Sejahtera</h4>
+                                <p class="body-sm text-muted">Sept 2024 – Oct 2024</p>
+                            </div>
+                            <span class="badge bg-gradient-purple text-white">Freelance</span>
+                        </div>
+                        <ul class="body-sm text-muted mt-3 experience-list">
+                            <li>Designed wireframes &amp; prototypes in Figma</li>
+                            <li>Built responsive website with HTML, CSS, Bootstrap, JS</li>
+                            <li>Implemented scroll animations &amp; hover effects</li>
+                            <li>Optimized for all device sizes</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="experience-card">
+                        <div class="d-flex flex-wrap justify-content-between align-items-start gap-2">
+                            <div>
+                                <span class="product-pill">UI/UX</span>
+                                <h4 class="card-title mt-2">Freelance UI/UX Designer</h4>
+                                <p class="body-sm text-muted">2024 – Present</p>
+                            </div>
+                            <span class="badge bg-gradient-purple text-white">Freelance</span>
+                        </div>
+                        <ul class="body-sm text-muted mt-3 experience-list">
+                            <li>Designed high-fidelity prototypes in Figma</li>
+                            <li>Created user flows &amp; wireframes</li>
+                            <li>Built interactive prototypes with Smart Animate</li>
+                            <li>Collaborated with developers for implementation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    CONTACT
+    ============================================================ -->
+    <section id="contact" class="section-cta">
+        <div class="container">
+            <div class="cta-banner">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <span class="eyebrow text-white-50">Let's Connect</span>
+                        <h2 class="display-md mb-2">Have a project in mind?</h2>
+                        <p class="body-lg text-muted">Let's collaborate and bring your ideas to life.</p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                        <a href="mailto:atharraryasatya@gmail.com" class="btn btn-primary btn-lg d-block d-lg-inline-block mb-2"><i class="bi bi-envelope"></i> Email Me</a>
+                        <a href="assets/CV_ATHAR_ARYASATYA.pdf" download class="btn btn-secondary btn-lg d-block d-lg-inline-block mb-2"><i class="bi bi-file-earmark-pdf"></i> Download CV</a>
+                    </div>
+                </div>
+                <div class="row mt-4 pt-3 border-top border-secondary border-opacity-25">
+                    <div class="col-12">
+                        <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                            <a href="https://www.linkedin.com/in/athar-aryasatya-1671aa2b6" target="_blank" class="social-link"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://github.com/athararyasatya" target="_blank" class="social-link"><i class="bi bi-github"></i></a>
+                            <a href="https://www.instagram.com/_atharrrrr?igsh=MXRyNnlkeXE1dmx0ZA==" target="_blank" class="social-link"><i class="bi bi-instagram"></i></a>
+                            <a href="https://wa.me/6289652731947?text=Hallo%20Athar%2C%20abis%20liat%20portfolio%20kamu%20nih%20boleh%20diskusi%3F" target="_blank" class="social-link"><i class="bi bi-whatsapp"></i></a>
+                            <a href="mailto:atharraryasatya@gmail.com" class="social-link"><i class="bi bi-envelope"></i></a>
+                            <a href="assets/CV_ATHAR_ARYASATYA.pdf" download class="social-link"><i class="bi bi-file-earmark-pdf"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <span class="brand-logo"><i class="bi bi-code-square"></i></span>
+                    <p class="body-sm text-muted mt-2">Athar Aryasatya &mdash; Frontend Developer &amp; UI/UX Designer</p>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h6 class="text-white">Navigation</h6>
+                    <ul class="list-unstyled body-sm">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6 class="text-white">Contact</h6>
+                    <ul class="list-unstyled body-sm">
+                        <li><i class="bi bi-envelope"></i> <a href="mailto:atharraryasatya@gmail.com">atharraryasatya@gmail.com</a></li>
+                        <li><i class="bi bi-phone"></i> <a href="tel:+6289652731947">+62 896-5273-1947</a></li>
+                        <li><i class="bi bi-geo-alt"></i> Tangerang, Banten</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="text-white">Find Me</h6>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="https://www.linkedin.com/in/athar-aryasatya-1671aa2b6" target="_blank" class="social-link"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://github.com/athararyasatya" target="_blank" class="social-link"><i class="bi bi-github"></i></a>
+                        <a href="https://www.instagram.com/_atharrrrr?igsh=MXRyNnlkeXE1dmx0ZA==" target="_blank" class="social-link"><i class="bi bi-instagram"></i></a>
+                        <a href="https://wa.me/6289652731947?text=Hallo%20Athar%2C%20abis%20liat%20portfolio%20kamu%20nih%20boleh%20diskusi%3F" target="_blank" class="social-link"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4" />
+            <p class="caption text-center text-muted">&copy; 2026 Athar Aryasatya. Built with <i class="bi bi-heart-fill text-danger"></i> &amp; Bootstrap.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
