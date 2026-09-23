@@ -197,6 +197,75 @@ img:active,
 [data-bs-theme="light"] .theme-toggle i { transform: rotate(180deg); }
 
 /* ================================================================
+   LANGUAGE TOGGLE (EN / IND)
+   ================================================================ */
+.lang-toggle {
+    position: relative;
+    display: inline-grid;
+    grid-template-columns: 40px 40px;
+    align-items: center;
+    background: var(--color-surface-2);
+    border: 1px solid var(--color-hairline-soft);
+    border-radius: var(--rounded-pill);
+    padding: 3px;
+    height: 36px;
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: border-color var(--transition-medium), background var(--transition-medium);
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.lang-toggle:hover {
+    border-color: var(--color-terraform);
+    background: var(--gradient-purple-subtle);
+}
+
+.lang-toggle:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 2px rgba(123, 66, 188, 0.4);
+}
+
+.lang-slider {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    height: calc(100% - 6px);
+    width: 40px;
+    background: var(--gradient-purple);
+    border-radius: var(--rounded-pill);
+    transition: transform var(--transition-medium);
+    z-index: 1;
+    box-shadow: 0 2px 10px rgba(123, 66, 188, 0.4);
+    pointer-events: none;
+}
+
+.lang-toggle[data-active="id"] .lang-slider {
+    transform: translateX(40px);
+}
+
+.lang-option {
+    position: relative;
+    z-index: 2;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-ink-muted);
+    transition: color var(--transition-medium);
+    border-radius: var(--rounded-pill);
+    pointer-events: auto;
+}
+
+.lang-option.active {
+    color: #fff;
+}
+
+/* ================================================================
    BUTTONS
    ================================================================ */
 .btn { font-family: var(--font-family); font-size: 13px; font-weight: 600; padding: 8px 16px; border-radius: var(--rounded-md); border: none; transition: all var(--transition-fast); display: inline-flex; align-items: center; gap: var(--spacing-xs); }
@@ -207,12 +276,6 @@ img:active,
 .btn-secondary:hover { background-color: var(--color-surface-3); color: var(--color-ink); transform: translateY(-1px); }
 .btn-tertiary { background: transparent; color: var(--color-ink-muted); border: 1px solid var(--color-hairline); }
 .btn-tertiary:hover { background: var(--gradient-purple-subtle); color: var(--color-ink); border-color: var(--color-terraform); }
-.btn-product-terraform { background: var(--gradient-purple); color: #fff; }
-.btn-product-terraform:hover { opacity: 0.9; color: #fff; transform: translateY(-2px); box-shadow: 0 4px 20px rgba(123,66,188,0.5); }
-.btn-product-vault { background-color: var(--color-vault); color: var(--color-inverse-ink); }
-.btn-product-vault:hover { opacity: 0.85; color: var(--color-inverse-ink); }
-.btn-product-waypoint { background-color: var(--color-waypoint); color: var(--color-inverse-ink); }
-.btn-product-waypoint:hover { opacity: 0.85; color: var(--color-inverse-ink); }
 .btn-sm { padding: 5px 12px; font-size: 12px; }
 .btn-lg { padding: 12px 24px; font-size: 15px; }
 
@@ -277,24 +340,21 @@ img:active,
     cursor: default !important;
 }
 
-/* ================================================================
-   PROFILE PHOTO - ANTI PECAH & RINGAN
-   ================================================================ */
 .profile-photo {
     width: 100%;
     height: 100%;
-    aspect-ratio: 1 / 1;              /* pastikan selalu kotak 1:1 */
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
     object-fit: cover;
-    object-position: center 25%;       /* fokus ke wajah (sedikit ke atas) */
-    background-color: var(--color-surface-2); /* fallback saat loading */
+    object-position: center 25%;
+    background-color: var(--color-surface-2);
     border: 4px solid var(--color-surface-2);
     position: relative;
     z-index: 2;
     outline: none !important;
     box-shadow: none !important;
-    image-rendering: -webkit-optimize-contrast; /* tajam di Chrome/Safari */
-    image-rendering: crisp-edges;                /* tajam di Firefox */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
     -webkit-tap-highlight-color: transparent !important;
     -webkit-user-select: none !important;
     user-select: none !important;
@@ -303,8 +363,8 @@ img:active,
     -webkit-touch-callout: none !important;
     pointer-events: none !important;
     cursor: default !important;
-    will-change: transform;            /* optimasi render */
-    transform: translateZ(0);          /* paksa GPU rendering → lebih ringan */
+    will-change: transform;
+    transform: translateZ(0);
     backface-visibility: hidden;
 }
 
@@ -642,4 +702,8 @@ img:active,
     .brand-logo { width: 22px; height: 22px; font-size: 10px; }
     .brand-text { font-size: 12px; }
     .theme-toggle { width: 32px; height: 32px; font-size: 14px; }
+    .lang-toggle { height: 32px; grid-template-columns: 34px 34px; }
+    .lang-slider { width: 34px; }
+    .lang-toggle[data-active="id"] .lang-slider { transform: translateX(34px); }
+    .lang-option { font-size: 10px; }
 }
