@@ -1,82 +1,150 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
+```html
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- ============================================================
-         PRIMARY META TAGS
-         ============================================================ -->
+    <!-- PRIMARY META TAGS -->
     <title>Athar Aryasatya | Frontend Developer & UI/UX Designer</title>
-    <meta name="title" content="Athar Aryasatya | Frontend Developer & UI/UX Designer" />
-    <meta name="description" content="Portfolio of Athar Aryasatya — Frontend Developer & UI/UX Designer based in Tangerang." />
-    <meta name="keywords" content="Athar Aryasatya, Frontend Developer, UI/UX Designer, Web Developer, Flutter Developer, Figma Designer, Portfolio, Tangerang, Indonesia" />
+
+    <meta
+        name="description"
+        content="Portfolio of Athar Aryasatya — Frontend Developer & UI/UX Designer based in Tangerang. Crafting responsive web & mobile applications with HTML, CSS, JavaScript, Bootstrap, Flutter, and Figma."
+    />
+
+    <meta
+        name="keywords"
+        content="Athar Aryasatya, Frontend Developer, UI/UX Designer, Web Developer, Flutter Developer, Figma Designer, Portfolio, Tangerang, Indonesia"
+    />
+
     <meta name="author" content="Athar Aryasatya" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#7b42bc" />
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://web-portfolio-athar-aryasatya.vercel.app/" />
+    <!-- CANONICAL -->
+    <link
+        rel="canonical"
+        href="https://web-portfolio-athar-aryasatya.vercel.app/"
+    />
 
     <!-- ============================================================
-         OPEN GRAPH — WHATSAPP, FACEBOOK, LINKEDIN
+         OPEN GRAPH - WHATSAPP / FACEBOOK / LINKEDIN
          ============================================================ -->
+
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://web-portfolio-athar-aryasatya.vercel.app/" />
-    <meta property="og:title" content="Athar Aryasatya | Frontend Developer & UI/UX Designer" />
-    <meta property="og:description" content="Portfolio of Athar Aryasatya — Frontend Developer & UI/UX Designer based in Tangerang." />
-    <meta property="og:image" content="https://web-portfolio-athar-aryasatya.vercel.app/assets/images/OG.jpg" />
-    <meta property="og:image:secure_url" content="https://web-portfolio-athar-aryasatya.vercel.app/assets/images/OG.jpg" />
+
+    <meta
+        property="og:url"
+        content="https://web-portfolio-athar-aryasatya.vercel.app/"
+    />
+
+    <meta
+        property="og:title"
+        content="Athar Aryasatya | Frontend Developer & UI/UX Designer"
+    />
+
+    <meta
+        property="og:description"
+        content="Portfolio of Athar Aryasatya — Frontend Developer & UI/UX Designer. Explore web and mobile projects built with HTML, CSS, JavaScript, Bootstrap, Flutter, and Figma."
+    />
+
+    <!-- OG IMAGE -->
+    <meta
+        property="og:image"
+        content="https://web-portfolio-athar-aryasatya.vercel.app/assets/images/OG.jpg"
+    />
+
+    <meta
+        property="og:image:secure_url"
+        content="https://web-portfolio-athar-aryasatya.vercel.app/assets/images/OG.jpg"
+    />
+
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Athar Aryasatya Portfolio" />
-    <meta property="og:site_name" content="Athar Aryasatya Portfolio" />
+
+    <meta
+        property="og:image:alt"
+        content="Athar Aryasatya Portfolio - Frontend Developer & UI/UX Designer"
+    />
+
+    <meta
+        property="og:site_name"
+        content="Athar Aryasatya Portfolio"
+    />
+
     <meta property="og:locale" content="id_ID" />
 
     <!-- ============================================================
-         TWITTER CARD
+         TWITTER / X CARD
          ============================================================ -->
+
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Athar Aryasatya | Frontend Developer & UI/UX Designer" />
-    <meta name="twitter:description" content="Portfolio of Athar Aryasatya — Frontend Developer & UI/UX Designer based in Tangerang." />
-    <meta name="twitter:image" content="https://web-portfolio-athar-aryasatya.vercel.app/assets/images/OG.jpg" />
+
+    <meta
+        name="twitter:url"
+        content="https://web-portfolio-athar-aryasatya.vercel.app/"
+    />
+
+    <meta
+        name="twitter:title"
+        content="Athar Aryasatya | Frontend Developer & UI/UX Designer"
+    />
+
+    <meta
+        name="twitter:description"
+        content="Frontend Developer & UI/UX Designer portfolio of Athar Aryasatya."
+    />
+
+    <meta
+        name="twitter:image"
+        content="https://web-portfolio-athar-aryasatya.vercel.app/assets/images/OG.jpg"
+    />
+
+    <meta
+        name="twitter:image:alt"
+        content="Athar Aryasatya Portfolio"
+    />
 
     <!-- ============================================================
-         FAVICON — pakai PNG kecil, bukan OG.jpg (yang besar)
+         FAVICON
          ============================================================ -->
-    <link rel="icon" type="image/png" href="assets/images/profile.png" />
-    <link rel="apple-touch-icon" href="assets/images/profile.png" />
 
-    <!-- ============================================================
-         BOOTSTRAP 5 CSS
-         ============================================================ -->
+    <link
+        rel="icon"
+        type="image/jpeg"
+        href="https://web-portfolio-athar-aryasatya.vercel.app/assets/images/OG.jpg"
+    />
+
+    <link
+        rel="apple-touch-icon"
+        href="https://web-portfolio-athar-aryasatya.vercel.app/assets/images/OG.jpg"
+    />
+
+    <!-- BOOTSTRAP 5 -->
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
         rel="stylesheet"
     />
 
-    <!-- ============================================================
-         BOOTSTRAP ICONS
-         ============================================================ -->
+    <!-- BOOTSTRAP ICONS -->
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
 
-    <!-- ============================================================
-         GOOGLE FONT: INTER
-         ============================================================ -->
+    <!-- GOOGLE FONT -->
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
         rel="stylesheet"
     />
 
-    <!-- ============================================================
-         CUSTOM CSS
-         ============================================================ -->
+    <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="style.css" />
 </head>
+```
+
 <body>
 
     <!-- ============================================================
